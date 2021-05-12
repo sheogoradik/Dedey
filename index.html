@@ -5,12 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dedey</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/datepicker.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
+    <div class="container">
+        <form action="" class="form">
+            <div class="input-box marker">
+                <label for="place">Место или название отеля</label>
+                <input id="place" type="text" class="input-place" placeholder="Введите здесь место">
+            </div>
+            <div class="input-box date">
+                <label for="date">Заезд</label>
+                <input type='text' class='datepicker-here' data-date-format='dd MM' placeholder="07 февраля" />
+            </div>
+            <div class="select">
+                <label for="select1">Выезд</label>
+                <select name="first" id="select1" class="form__select">
+                    <option value="1">Essay</option>
+                    <option value="2">option1</option>
+                    <option value="3">option2</option>
+                </select>
+
+                <div class="select-custom">
+                    <div class="select-custom__header">
+                        <span class="select-custom__current">22 февраля</span>
+                        <div class="select-custom__icon"></div>
+                    </div>
+                    <div class="select-custom__body">
+                        <div class="select-custom__item">22 февраля</div>
+                        <div class="select-custom__item">23 февраля</div>
+                        <div class="select-custom__item">24 февраля</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__num">
+                <div class="form__num-box box1">
+                    <label for="num1">Номера</label>
+                    <input type="text" id="num1" class="num1" value="0">
+                </div>
+                
+                <div class="form__num-box box2">
+                    <label for="num2">Взрослые</label>
+                    <input type="text" id="num2" class="num2" value="0">
+                </div>
+                
+                <div class="form__num-box box3">
+                    <label for="num3">Дети</label>
+                    <input type="text" id="num3" class="num3" value="0">
+                </div>
+            </div>
+            <div class="form__plusbtn">
+                <button><img src="images/plusbtn.png" alt="picture"></button>
+            </div>
+            <button type="submit" class="submit">Найти</button>
+        </form>
+    </div>
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/datepicker.min.js"></script>
     <script src="js/main.js"></script>    
 </body>
 </html>

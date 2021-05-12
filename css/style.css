@@ -1,0 +1,306 @@
+/*GLOBAL*/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 25;
+    background-color: #F1F3F4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*FORM*/
+.form {
+    display: flex;
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-right: 24px;
+    position: relative;
+}
+
+.input-box.marker::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    right: -22px;
+
+}
+
+.input-box.marker {
+    margin-left: 24px;
+}
+
+.input-box.date {
+    margin-left: 24px;
+    position: relative;
+}
+
+.input-box.date::before {
+    content: url("../images/calendar.png");
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.datepicker-here::placeholder {
+    color: #000000;
+}
+
+.datepicker-here {
+    padding-left: 28px;
+    border-style: none;
+    font-family: 'Fira Sans', sans-serif;
+    position: relative;
+    width: 165px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000000;
+    outline: none;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+.input-place {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #8A929A;
+    padding-left: 23px;
+    border-style: none;
+    outline: none;
+}
+
+.input-box.marker::before {
+    content: url("../images/marker.png");
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+
+.form__num {
+    display: flex;
+}
+
+.form__num-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.form__num-box.box1::before,
+.form__num-box.box2::before,
+.form__num-box.box3::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 0 5px 7px 5px;
+    border-color: transparent transparent #889098 transparent;
+    right: 0;
+    top: 33px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.form__num-box.box1::after,
+.form__num-box.box2::after,
+.form__num-box.box3::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 0 5px 7px 5px;
+    border-color: transparent transparent #889098 transparent;
+    right: 0;
+    bottom: 10px;
+    transform: rotate(180deg);
+    cursor: pointer;
+    z-index: 5;
+}
+
+.form__num-box.box1:hover::after,
+.form__num-box.box2:hover::after,
+.form__num-box.box3:hover::after {
+    border-color: transparent transparent #FF9A00 transparent;
+}
+
+.form__num-box.box2::before,
+.form__num-box.box2::after {
+    right: 10px;
+}
+
+.form__num-box.box3::before,
+.form__num-box.box3::after {
+    right: -14px;
+}
+
+.form__num-box.box1:hover:before,
+.form__num-box.box2:hover:before,
+.form__num-box.box3:hover:before {
+    border-color: transparent transparent #FF9A00 transparent;
+}
+
+.form__num div {
+    margin-left: 32px;
+}
+
+.num1,
+.num2,
+.num3 {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    color: #8A929A;
+    border: 1px solid #8A929A;
+    padding-left: 10px;
+    outline: none;
+}
+
+.form__plusbtn {
+    margin-left: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__plusbtn button {
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+
+.submit {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 100;
+    color: #ffffff;
+    padding: 24px 55px;
+    background-color: #FF9A00;
+    transition: .3s;
+    border-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 18px;
+}
+
+.submit:hover {
+    background-color: #F8CB79;
+    transition: .3s;
+}
+
+/*SELECT*/
+.select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 24px;
+    position: relative;
+}
+
+.select::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    right: -22px;
+}
+
+.select select {
+    display: none;
+}
+
+.select-custom {
+    position: relative;
+}
+
+.select-custom.is-active .select-custom__body {
+    display: block;
+}
+
+.select-custom.is-active .select-custom__header {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.select-custom__header {
+    display: flex;
+    /* margin-bottom: 20px; */
+    /* background-color: lightgrey; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-custom__body {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+    background-color: #ffffff;
+    border-top: 0;
+}
+
+.select-custom__item {
+    font-family: 'Fira Sans', sans-serif;
+    padding: 13px 30px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.select-custom__item:hover {
+    background-color: #F8CB79;
+}
+
+.select-custom__current {
+    font-family: 'Fira Sans', sans-serif;
+    position: relative;
+    width: 165px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #353535;
+}
+
+.select-custom__current::after {
+    content: url("../images/select-arrow.png");
+    position: absolute;
+    top: 49%;
+    right: 10px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
