@@ -118,7 +118,7 @@ label {
     position: relative;
 }
 
-.form__num-box.box1::before,
+/* .form__num-box.box1::before,
 .form__num-box.box2::before,
 .form__num-box.box3::before {
     content: "";
@@ -167,7 +167,7 @@ label {
 .form__num-box.box2:hover:before,
 .form__num-box.box3:hover:before {
     border-color: transparent transparent #FF9A00 transparent;
-}
+} */
 
 .form__num div {
     margin-left: 32px;
@@ -216,6 +216,31 @@ label {
 .submit:hover {
     background-color: #F8CB79;
     transition: .3s;
+}
+
+.form__btn-box {
+    position: absolute;
+    top: 29px;
+}
+
+.form__btn-box button {
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+
+.form__btn-box button svg polygon {
+    fill: #000000;
+    transition: .3s;
+}
+
+.form__btn-box button svg polygon:hover {
+    fill: #FF9A00;
+    transition: .3s;
+}
+
+.btn-top {
+    transform: rotate(180deg);
 }
 
 /*SELECT*/

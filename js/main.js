@@ -25,3 +25,27 @@ let select = function () {
 };
 
 select();
+
+/*NUM SECTION*/
+let btns = document.querySelectorAll('.counter-btn');
+
+btns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        let direction = this.dataset.direction;
+        let inp = this.closest('div').parentElement.querySelector('.num');
+        let currentValue = +inp.value;
+        let newValue;
+
+        if (direction === 'btn-top') {
+            newValue = currentValue + 1;
+        } else {
+
+        }
+
+        inp.value = newValue;
+    })
+})
+
+
+
