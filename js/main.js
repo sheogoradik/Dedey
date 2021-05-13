@@ -27,25 +27,32 @@ let select = function () {
 select();
 
 /*NUM SECTION*/
-let btns = document.querySelectorAll('.counter-btn');
+let btnsUp = document.querySelectorAll('.counter-btn-up');
+let btnsDown = document.querySelectorAll('.counter-btn-down');
+let integer = 0;
 
-btns.forEach(btn => {
+btnsUp.forEach(btn => {
     btn.addEventListener('click', function(e) {
         e.preventDefault();
-        let direction = this.dataset.direction;
-        let inp = this.closest('div').parentElement.querySelector('.num');
-        let currentValue = +inp.value;
-        let newValue;
-
-        if (direction === 'btn-top') {
-            newValue = currentValue + 1;
-        } else {
-
-        }
-
-        inp.value = newValue;
+        let int = this.closest('.form__num-box').querySelector('.num');
+        integer += 1;
+        int.value = integer;
     })
+
 })
 
+btnsDown.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        let int = this.closest('.form__num-box').querySelector('.num');
+
+        if (integer > 0) {
+            integer -= 1;
+        }
+        
+        int.value = integer;
+    })
+
+})
 
 
