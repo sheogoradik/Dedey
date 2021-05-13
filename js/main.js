@@ -29,14 +29,12 @@ select();
 /*NUM SECTION*/
 let btnsUp = document.querySelectorAll('.counter-btn-up');
 let btnsDown = document.querySelectorAll('.counter-btn-down');
-let integer = 0;
 
 btnsUp.forEach(btn => {
     btn.addEventListener('click', function(e) {
         e.preventDefault();
         let int = this.closest('.form__num-box').querySelector('.num');
-        integer += 1;
-        int.value = integer;
+        int.value++;
     })
 
 })
@@ -46,13 +44,10 @@ btnsDown.forEach(btn => {
         e.preventDefault();
         let int = this.closest('.form__num-box').querySelector('.num');
 
-        if (integer > 0) {
-            integer -= 1;
+        if (int.value > 0) {
+            int.value--;
         }
-        
-        int.value = integer;
     })
-
 })
 
 

@@ -62,6 +62,13 @@ body {
     position: relative;
 }
 
+.input-box.date::after {
+    content: url("../images/dot.png");
+    position: absolute;
+    right: -25px;
+    bottom: 15px;
+}
+
 .input-box.date::before {
     content: url("../images/calendar.png");
     position: absolute;
@@ -79,7 +86,7 @@ body {
     border-style: none;
     font-family: 'Fira Sans', sans-serif;
     position: relative;
-    width: 165px;
+    width: 130px;
     font-weight: normal;
     font-size: 18px;
     color: #000000;
@@ -230,7 +237,7 @@ label {
 }
 
 .form__btn-box button svg polygon {
-    fill: #000000;
+    fill: #8A929A;
     transition: .3s;
 }
 
@@ -315,7 +322,7 @@ label {
 .select-custom__current {
     font-family: 'Fira Sans', sans-serif;
     position: relative;
-    width: 165px;
+    width: 150px;
     font-weight: normal;
     font-size: 18px;
     color: #353535;
@@ -328,4 +335,49 @@ label {
     right: 10px;
     z-index: 1;
     transform: translateY(-50%);
+}
+
+/*MEDIA*/
+
+@media (max-width: 1200px) {
+    .form {
+        flex-direction: column;
+    }
+
+    .input-box.marker::before {
+        bottom: 2px;
+    }
+
+    .input-box.date::before {
+        bottom: 2px;
+    }
+
+    .input-box,
+    .select,
+    .form__num,
+    .form__plusbtn,
+    .submit {
+        margin-top: 20px;
+    }
+
+    .submit,
+    .form__plusbtn {
+        margin-left: 0;
+    }
+
+    .input-box.marker::after {
+        display: none;
+    }
+
+    .select::after {
+        display: none;
+    }
+
+    .form__btn-box {
+        top: 21px;
+    }
+
+    .input-box.date::after {
+        display: none;
+    }
 }
